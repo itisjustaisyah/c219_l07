@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 1</title>
+</head>
+
+<body>
+    <form id="myForm">
+        <!-- Two text fields - Name and Email -->
+        <input id="name" type="text" placeholder="Name" value=""><br><br>
+        <input id="email" type="email" placeholder="Email" value=""><br><br>
+        <!-- Two radio buttons for Gender - Male and Female -->
+        <input id="female" type="radio" value="Female" name="sex">
+        <label for="female">Female</label>
+        <input id="male" type="radio" value="Male" name="sex">
+        <label for="female">Male</label>
+        <br><br>
+        <!-- Submit button -->
+        <input id="submit" type="button" value="Submit" onclick="displayFormData()">
+    </form>
+
+    <!-- Display form data -->
+    <p id="displayName"></p>
+    <p id="displayEmail"></p>
+    <p id="displaySex"></p>
+
+    <script>
+        // JavaScript to get and display form data
+        function displayFormData(){
+            let name = document.getElementById("name").value;
+            let email = document.getElementById("email").value;
+            let sex = document.getElementById("myForm").elements["sex"].value;
+
+            document.getElementById("displayName").innerHTML = name
+            document.getElementById("displayEmail").innerHTML = email
+            document.getElementById("displaySex").innerHTML = sex
+        }
+    </script>
+</body>
+
+</html>
